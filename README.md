@@ -24,7 +24,6 @@ $ git clone https://github.com/michael-tamse/CodingSchule.git
 
 ### lokal starten
 ```sh
-$ git clone https://github.com/michael-tamse/CodingSchule.git
 $ cd CodingSchule
 $ ionic lab
 ```
