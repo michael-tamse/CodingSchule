@@ -1,0 +1,46 @@
+<!--
+  Generated template for the EditFirebaseConfigPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Firebase Connect</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked color="primary">API Key</ion-label>
+      <ion-input type="text" [(ngModel)]="firebaseConfig.apiKey"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked color="primary">Auth Domain</ion-label>
+      <ion-input type="text" [(ngModel)]="firebaseConfig.authDomain"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked color="primary">Database URL</ion-label>
+      <ion-input type="text" [(ngModel)]="firebaseConfig.databaseURL"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked color="primary">Project ID</ion-label>
+      <ion-input type="text" [(ngModel)]="firebaseConfig.projectId"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked color="primary">Storage Bucket</ion-label>
+      <ion-input type="text" [(ngModel)]="firebaseConfig.storageBucket"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked color="primary">Messaging Sender ID</ion-label>
+      <ion-input type="text" [(ngModel)]="firebaseConfig.messagingSenderId"></ion-input>
+    </ion-item>
+  </ion-list> 
+
+  <button ion-button full (click)="connect()">Connect</button>
+
+</ion-content>

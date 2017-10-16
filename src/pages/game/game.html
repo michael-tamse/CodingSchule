@@ -1,0 +1,32 @@
+<!--
+  Generated template for the GamePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Spielen</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="card-background-page">
+
+  <ion-list>
+
+    <ion-card *ngFor="let cardSet of cardSets; let i=index" (click)="playGame(cardSet)">
+
+      <img [src]="cardSet.uri"/>
+
+      <ion-card-content>
+      {{ cardSet.name }}
+      </ion-card-content>
+
+    </ion-card>
+
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,52 @@
+page-play-game {
+
+    .card {
+
+        .card-image {
+            position: relative;
+            opacity: 0.3;
+        }
+
+        .card-state {
+            position: absolute;
+            top: 20%;        
+            width: 100%;
+        }
+
+        .card-question {
+            position: absolute;
+
+            font-size: 2.0em;
+            font-weight: bold;
+
+            top: 40%;        
+            width: 100%;
+        }
+
+        .card-answer {
+            position: absolute;
+            top: 60%;        
+            width: 100%;
+        }
+
+
+    }
+
+
+    .swiper-pagination-bullet {
+        opacity: .4;
+    }
+
+    .swiper-pagination-bullet-active {
+        border-radius: 0%;
+        opacity: 0.9;
+    }
+
+    .card-correct-answer {
+        background : #00FF00;
+    }
+
+    .card-wrong-answer {
+        background : #FF0000;
+    }
+}

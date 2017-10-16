@@ -1,5 +1,8 @@
 {
   "name": "CodingSchule",
   "app_id": "6b1e5462",
-  "type": "ionic-angular"
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
 }

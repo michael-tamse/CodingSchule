@@ -1,0 +1,62 @@
+<!--
+  Generated template for the EditCardSetPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Stapel bearbeiten</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="outer-content">
+<ion-list>
+  <ion-list-header>Kartenstapel</ion-list-header>
+
+  <ion-item no-lines>
+    <ion-thumbnail>
+      <img [src]="cardSet.uri" (click)="takePhoto()"/>
+    </ion-thumbnail>
+  </ion-item>
+
+  <ion-item no-lines>
+    <ion-label stacked color="primary">Name des Kartenstapels</ion-label>
+    <ion-input type="text" [(ngModel)]="cardSet.name"></ion-input>
+
+  </ion-item>
+</ion-list> 
+<ion-list>
+  <ion-list-header>Karten</ion-list-header>
+    <ion-item-sliding *ngFor="let card of cards">
+
+      <button ion-item (click)="editCard(card)">
+
+        <ion-thumbnail item-start>
+            <img [src]="card.uri"/>
+        </ion-thumbnail>
+
+
+        <p>{{ card.question }}</p>
+        <p>{{ card.answer }}</p>
+      </button>
+
+      <ion-item-options side="right">
+        <button color="danger" ion-button (click)="deleteCard(card)">
+          <ion-icon name="trash"></ion-icon>
+          Delete
+        </button>
+      </ion-item-options>
+
+    </ion-item-sliding>
+
+</ion-list>
+
+<ion-fab bottom right>
+  <button ion-fab (click)="addCard()"><ion-icon name="add"></ion-icon></button>
+</ion-fab>
+
+
+</ion-content>
