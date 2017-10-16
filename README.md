@@ -1,26 +1,39 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+# CodingSchule - BilKart - Die Bilderkarten-Verwaltung
+## google Firebase
+![createProject](https://user-images.githubusercontent.com/16017172/31603964-1a5b5834-b262-11e7-8250-1eb134da9f73.png)
+"BilKart" als Projekt hinzufügen.
 
-## How to use this template
+![createProject](https://user-images.githubusercontent.com/16017172/31603965-1a8cbfb4-b262-11e7-9126-6527f3fce9ff.png)
+![createProject](https://user-images.githubusercontent.com/16017172/31603966-1aa9ae6c-b262-11e7-81c4-3ae7e658eeab.png)
+In die Projekteinstellungen wechseln und unten rechts auf "Firebase zu meiner Web-App hinzufügen" klicken.
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+![createProject](https://user-images.githubusercontent.com/16017172/31603967-1ac5e244-b262-11e7-8c9f-a73523c307b9.png)
+Firebase einstellungen kopieren oder aufschreiben. Diese Infos müssen werden in der App als erstes abgefragt. Mit diesen Informationen verbindet sich die App gegen google Firebase. (Achtung! Aktuell ohne Authorisierung, daher müssen noch nachfolgende Schritte erfolgen.)
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+![createProject](https://user-images.githubusercontent.com/16017172/31603966-1aa9ae6c-b262-11e7-81c4-3ae7e658eeab.png)
+In die Projekteinstellungen wechseln und unten rechts auf "Firebase zu meiner Web-App hinzufügen" klicken.
 
-### With the Ionic CLI:
+![securityStorage](https://user-images.githubusercontent.com/16017172/31603968-1afd8384-b262-11e7-96c0-8a48c035774e.png)
+Storage Security ausschalten.
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
+![securityDatabase](https://user-images.githubusercontent.com/16017172/31603969-1b189ea8-b262-11e7-85ae-6e4cf1428ba6.png)
+Cloud Firestore Security ausschalten.
 
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myTabs tabs
+## Ionic
+### lokal replizieren
+```sh
+$ git clone https://github.com/michael-tamse/CodingSchule.git
 ```
 
-Then, to run it, cd into `myTabs` and run:
-
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
+### lokal starten
+```sh
+$ git clone https://github.com/michael-tamse/CodingSchule.git
+$ cd CodingSchule
+$ ionic lab
 ```
-
-Substitute ios for android if not on a Mac.
-
+### in dem Ionic Viewer starten
+```sh
+$ ionic link
+$ ionic upload
+```
+und anschliessend in die Ionic View App gehen, sync, fertig :)
