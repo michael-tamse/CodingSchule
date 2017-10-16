@@ -8,10 +8,7 @@
 In die Projekteinstellungen wechseln und unten rechts auf "Firebase zu meiner Web-App hinzufügen" klicken.
 
 ![createProject](https://user-images.githubusercontent.com/16017172/31603967-1ac5e244-b262-11e7-8c9f-a73523c307b9.png)
-Firebase einstellungen kopieren oder aufschreiben. Diese Infos müssen werden in der App als erstes abgefragt. Mit diesen Informationen verbindet sich die App gegen google Firebase. (Achtung! Aktuell ohne Authorisierung, daher müssen noch nachfolgende Schritte erfolgen.)
-
-![createProject](https://user-images.githubusercontent.com/16017172/31603966-1aa9ae6c-b262-11e7-81c4-3ae7e658eeab.png)
-In die Projekteinstellungen wechseln und unten rechts auf "Firebase zu meiner Web-App hinzufügen" klicken.
+Firebase Einstellungen kopieren oder aufschreiben. Diese Infos werden in der App als erstes abgefragt. Mit diesen Informationen verbindet sich die App gegen google Firebase. (Achtung! Aktuell ohne Autorisierung, daher müssen noch nachfolgende Schritte erfolgen.)
 
 ![securityStorage](https://user-images.githubusercontent.com/16017172/31603968-1afd8384-b262-11e7-96c0-8a48c035774e.png)
 Storage Security ausschalten.
