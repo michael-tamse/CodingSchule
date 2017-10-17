@@ -15,6 +15,7 @@ Login|Kartenübersicht|Abfragespiel
 [Fab Button](https://ionicframework.com/docs/api/components/fab/FabButton/)||
 [Daten speichern mit Firestore](https://firebase.google.com/docs/firestore/manage-data/add-data)||
 ||
+||
 **Foto erstellen**||
 ![Foto erstellen](https://user-images.githubusercontent.com/16017172/31615498-07e76918-b28a-11e7-92a4-c8a7face14e2.PNG)||
 [Camera](https://ionicframework.com/docs/native/camera/)||
