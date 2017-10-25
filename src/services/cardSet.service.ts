@@ -6,11 +6,13 @@ import { firestore } from 'firebase/app';
 import 'firebase/firestore';
 
 /* 
-eine Möglichkeit uuids zu erzeugen
+Eine Möglichkeit uuids zu erzeugen. Besser ist es jedoch,
+die Verwaltung der ids firestore zu überlassen.
 
 declare function require(moduleName: string): any;
 const uuidv4 = require('uuid/v4');
 */
+
 export var cardSetsSingleton : CardSet[] = [];
 
 export class CardSet implements PhotoId {
