@@ -5,9 +5,12 @@ import { PhotoId } from './photo.service';
 import { firestore } from 'firebase/app';
 import 'firebase/firestore';
 
+/* 
+eine Möglichkeit uuids zu erzeugen
+
 declare function require(moduleName: string): any;
 const uuidv4 = require('uuid/v4');
-
+*/
 export var cardSetsSingleton : CardSet[] = [];
 
 export class CardSet implements PhotoId {
@@ -88,7 +91,6 @@ export class CardService {
 
     // create card
     let card : Card = new Card();
-    card.id         = uuidv4();
     card.uri        = 'http://via.placeholder.com/640x480';
     card.cardSetId  = aCardSet.id;
     card.question   = '';
@@ -98,7 +100,17 @@ export class CardService {
     someCards.push(card);
 
     // save card to database
-    this.updateCard(card);
+    firestore().collection("cardSets").doc(aCardSet.id).collection("cards").add({
+    })
+    .then( docRef => {
+      card.id = docRef.id;
+      this.updateCard(card);
+    })
+    .catch( error => {
+      console.error("Error adding document: ", error);
+    });
+
+
       
     return card;
   }
@@ -117,8 +129,8 @@ export class CardService {
           
         });
     })
-    .catch( anError => {
-      console.log('readCardsByCardSet() failed:', anError);
+    .catch( error => {
+      console.log('readCardsByCardSet() failed:', error);
     });
   }
 
@@ -139,8 +151,8 @@ export class CardService {
 
       this.shuffle(someInGameCards);
     })
-    .catch( anError => {
-      console.log('readShuffledInGameCardsByCardSet() failed:', anError);
+    .catch( error => {
+      console.log('readShuffledInGameCardsByCardSet() failed:', error);
     });
   }
 
@@ -199,7 +211,6 @@ export class CardSetService {
     
     // create instance
     let cardSet : CardSet = new CardSet();
-    cardSet.id = uuidv4();
     cardSet.name = 'unbenannt';
     cardSet.uri = 'http://via.placeholder.com/640x480';
 
@@ -207,7 +218,15 @@ export class CardSetService {
     someCardSets.push(cardSet);
     
     // add to database
-    this.updateCardSet(cardSet);
+    firestore().collection("cardSets").add({
+    })
+    .then( docRef => {
+      cardSet.id = docRef.id;
+      this.updateCardSet(cardSet);
+    })
+    .catch( error => {
+      console.error("Error adding document: ", error);
+    });
 
     return cardSet;
   }
@@ -221,8 +240,8 @@ export class CardSetService {
         someCardSets.push(this.createCardSetFromSnapshop(cardSetSnapshot));
       });
     })
-    .catch( anError => {
-      console.log('readCardSets() failed:', anError);
+    .catch( error => {
+      console.log('readCardSets() failed:', error);
     });
   }
 
@@ -254,7 +273,7 @@ export class CardSetService {
       batch.commit();
     });
 
-    // remove cardsSet from database
+    // remove cardSet from database
     firestore().collection("cardSets").doc(anCardSetToDelete.id).delete();
   }
 
