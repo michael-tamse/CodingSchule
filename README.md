@@ -55,4 +55,4 @@ $ ionic lab
 $ ionic link
 $ ionic upload
 ```
-und anschliessend in die Ionic View App gehen, sync, fertig :)
+und anschließend in die Ionic View App gehen, sync, fertig :)
